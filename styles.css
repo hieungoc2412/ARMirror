@@ -997,6 +997,38 @@ body {
     transform: translateY(-2px);
 }
 
+/* Contact CTA Button */
+.contact-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #CF7AAF 0%, #C3D5A5 100%);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(207, 122, 175, 0.4);
+}
+
+.contact-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(207, 122, 175, 0.5);
+}
+
+.contact-cta-btn:active {
+    transform: translateY(-1px);
+}
+
+.contact-cta-btn svg {
+    flex-shrink: 0;
+}
+
 /* Social Links */
 .social-links {
     display: flex;

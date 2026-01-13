@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArtMirror - Chi tiết sản phẩm</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Import model-viewer library -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
     <style>
+        /* Model Viewer Styles */
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            --poster-color: transparent;
+        }
         /* Product Detail Page Styles */
         .product-detail-page {
             padding: 60px 40px;
@@ -433,8 +442,15 @@
                 <!-- Left Side - Product Images -->
                 <div class="product-images">
                     <div class="main-product-image">
-                        <img src="productImage/15f429f06284eedab795.jpg" alt="Vintage baroque style mirror"
-                            id="mainImage">
+                        <model-viewer
+                             src="DemoImage/glb/guong1.glb"
+                             ar
+                            ar-modes="webxr scene-viewer quick-look"
+                            camera-controls
+                            auto-rotate
+                             ></model-viewer>
+                        <!-- <img src="productImage/15f429f06284eedab795.jpg" alt="Vintage baroque style mirror"
+                            id="mainImage"> -->
                     </div>
                     <div class="product-thumbnails">
                         <div class="thumbnail active" data-image="productImage/15f429f06284eedab795.jpg">
