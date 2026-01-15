@@ -81,14 +81,12 @@ function initializeHeaderScripts() {
     }
 
     // Contact button click
-    const contactBtn = document.querySelector('.contact-btn');
+    const contactBtn = document.getElementById('contactBtn') || document.querySelector('.contact-btn');
     if (contactBtn) {
         contactBtn.addEventListener('click', function () {
             console.log('Liên hệ');
-            const footer = document.querySelector('.footer');
-            if (footer) {
-                footer.scrollIntoView({ behavior: 'smooth' });
-            }
+            // Navigate to contact page
+            window.location.href = 'contact-form.html';
         });
     }
 }

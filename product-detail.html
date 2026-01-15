@@ -316,6 +316,41 @@
             transform: translateY(-3px);
         }
 
+        /* QR Code Section */
+        .qr-code-section {
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .qr-label {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+            color: white;
+        }
+
+        .qr-image-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            background: white;
+            padding: 10px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .qr-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         /* Related Products Section */
         .related-products-section {
             max-width: 1400px;
@@ -451,95 +486,54 @@
                 <!-- Left Side - Product Images -->
                 <div class="product-images">
                     <div class="main-product-image">
-                        <model-viewer src="DemoImage/glb/Model1.glb" ar ar-modes="webxr scene-viewer quick-look"
+                        <model-viewer id="modelViewer" src="" ar ar-modes="webxr scene-viewer quick-look"
                             camera-controls auto-rotate></model-viewer>
-                        <!-- <img src="productImage/15f429f06284eedab795.jpg" alt="Vintage baroque style mirror"
-                            id="mainImage"> -->
                     </div>
-                    <div class="product-thumbnails">
-                        <div class="thumbnail active" data-image="productImage/15f429f06284eedab795.jpg">
-                            <img src="productImage/15f429f06284eedab795.jpg" alt="View 1">
-                        </div>
-                        <div class="thumbnail" data-image="productImage/a51ac20c897805265c69.jpg">
-                            <img src="productImage/a51ac20c897805265c69.jpg" alt="View 2">
-                        </div>
-                        <div class="thumbnail" data-image="productImage/e9d657e91c9d90c3c98c.jpg">
-                            <img src="productImage/e9d657e91c9d90c3c98c.jpg" alt="View 3">
-                        </div>
+                    <div class="product-thumbnails" id="productThumbnails">
+                        <!-- Thumbnails will be loaded dynamically -->
                     </div>
                 </div>
 
                 <!-- Right Side - Product Info -->
                 <div class="product-info-card">
-                    <h1 class="product-title">Vintage baroque style mirror</h1>
-                    <div class="product-price">xxx.000 đ</div>
-
-                    <div class="product-rating">
-                        <div class="stars">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <span class="review-link">Review</span>
-                    </div>
+                    <h1 class="product-title" id="productTitle">Loading...</h1>
+                    <div class="product-price" id="productPrice">xxx.000 đ</div>
 
                     <!-- Color Option -->
                     <div class="product-option">
                         <label class="option-label">1. Colors</label>
-                        <div class="color-options">
-                            <div>
-                                <div class="color-option silver active" data-color="silver"></div>
-                                <div class="color-label">Bạc sáng</div>
-                            </div>
+                        <div class="color-options" id="colorOptions">
+                            <!-- Colors will be loaded dynamically -->
                         </div>
                     </div>
 
                     <!-- Size Options -->
                     <div class="product-option">
                         <label class="option-label">2. Sizes</label>
-                        <div class="size-options">
-                            <div class="size-option" data-size="30x50">30"x50"</div>
-                            <div class="size-option" data-size="30-30">30"-30"</div>
-                            <div class="size-option" data-size="32-60">32"-60"</div>
-                            <div class="size-option" data-size="36-60">36"x60"</div>
-                            <div class="size-option active" data-size="36-50">36"x50"</div>
-                            <div class="size-option" data-size="36-36">36"x36"</div>
-                            <div class="size-option" data-size="36-60">36"x60"</div>
-                            <div class="size-option" data-size="30-30">30"x30"</div>
-                            <div class="size-option" data-size="32-60">32"x60"</div>
+                        <div class="size-options" id="sizeOptions">
+                            <!-- Sizes will be loaded dynamically -->
                         </div>
                     </div>
 
                     <!-- Description -->
                     <div class="product-option product-description">
                         <label class="option-label">3. Mô tả sản phẩm</label>
-                        <p>
-                            Gương Baroque phong cách cổ điển Châu Âu, được chế tác tinh xảo với họa tiết phức tạp, mang
-                            đến vẻ đẹp sang trọng và đẳng cấp. Khung gương được làm từ hợp kim cao cấp, phủ lớp sơn bạc
-                            sáng bóng, tạo nên điểm nhấn hoàn hảo cho không gian nội thất. Thiết kế cổ điển với những
-                            đường nét uốn lượn mềm mại, phù hợp với nhiều phong cách trang trí từ cổ điển đến hiện đại.
-                            Sản phẩm có nhiều kích thước để bạn lựa chọn, phù hợp với mọi không gian từ phòng khách,
-                            phòng ngủ đến hành lang.
+                        <p id="productDescription">
+                            <!-- Description will be loaded dynamically -->
                         </p>
-                    </div>
-
-                    <!-- Quantity and Cart -->
-                    <div class="quantity-cart-section">
-                        <div class="quantity-selector">
-                            <button class="quantity-btn" id="decreaseBtn">-</button>
-                            <span class="quantity-value" id="quantityValue">1</span>
-                            <button class="quantity-btn" id="increaseBtn">+</button>
-                        </div>
-                        <span class="add-to-cart-text">
-                            <<< Add item</span>
                     </div>
 
                     <!-- Action Buttons -->
                     <div class="action-buttons">
-                        <button class="btn-primary" id="buyNowBtn">Mua ngay</button>
-                        <button class="btn-secondary" id="addToCartBtn">Thêm vào giỏ</button>
+                        <button class="btn-primary" id="buyNowBtn">Liên Hệ</button>
+                    </div>
+                    <br>
+                    <!-- QR Code Section -->
+                    <div class="qr-code-section">
+                        <p class="qr-label">Quét mã QR để trải nghiệm AR</p>
+                        <div class="qr-image-container">
+                            <img src="DemoImage/qr/qr.jpg" alt="QR Code AR">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -547,68 +541,10 @@
             <!-- Related Products Section -->
             <div class="related-products-section">
                 <div class="related-header">
-                    <h2>Các mẫu khác</h2>
+                    <h2>Sản phẩm liên quan</h2>
                 </div>
-                <div class="related-products-grid">
-                    <div class="related-product-card">
-                        <div class="related-product-image">
-                            <img src="productImage/15f429f06284eedab795.jpg" alt="Gương 1">
-                        </div>
-                        <div class="related-product-info">
-                            <h3>GƯƠNG 1</h3>
-                            <p>xxx.000 đ</p>
-                        </div>
-                    </div>
-
-                    <div class="related-product-card">
-                        <div class="related-product-image">
-                            <img src="productImage/a51ac20c897805265c69.jpg" alt="Gương 2">
-                        </div>
-                        <div class="related-product-info">
-                            <h3>GƯƠNG 2</h3>
-                            <p>xxx.000 đ</p>
-                        </div>
-                    </div>
-
-                    <div class="related-product-card">
-                        <div class="related-product-image">
-                            <img src="productImage/e9d657e91c9d90c3c98c.jpg" alt="Gương 3">
-                        </div>
-                        <div class="related-product-info">
-                            <h3>GƯƠNG 3</h3>
-                            <p>xxx.000 đ</p>
-                        </div>
-                    </div>
-
-                    <div class="related-product-card">
-                        <div class="related-product-image">
-                            <img src="productImage/f0da71ed3a99b6c7ef88.jpg" alt="Gương 4">
-                        </div>
-                        <div class="related-product-info">
-                            <h3>GƯƠNG 4</h3>
-                            <p>xxx.000 đ</p>
-                        </div>
-                    </div>
-
-                    <div class="related-product-card">
-                        <div class="related-product-image">
-                            <img src="productImage/15f429f06284eedab795.jpg" alt="Gương 5">
-                        </div>
-                        <div class="related-product-info">
-                            <h3>GƯƠNG 5</h3>
-                            <p>xxx.000 đ</p>
-                        </div>
-                    </div>
-
-                    <div class="related-product-card">
-                        <div class="related-product-image">
-                            <img src="productImage/a51ac20c897805265c69.jpg" alt="Gương 6">
-                        </div>
-                        <div class="related-product-info">
-                            <h3>GƯƠNG 6</h3>
-                            <p>xxx.000 đ</p>
-                        </div>
-                    </div>
+                <div class="related-products-grid" id="relatedProductsGrid">
+                    <!-- Related products will be loaded dynamically -->
                 </div>
             </div>
         </section>
@@ -619,84 +555,142 @@
 
     <!-- Scripts -->
     <script src="include.js"></script>
+    <script src="products-data.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Thumbnail image switching
-            const thumbnails = document.querySelectorAll('.thumbnail');
-            const mainImage = document.getElementById('mainImage');
+            // Get product ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id') || '1'; // Default to product 1 if no ID
 
+            // Get product data
+            const product = getProductById(productId);
+
+            if (!product) {
+                console.error('Product not found');
+                // Redirect to products page if product not found
+                window.location.href = 'products.html';
+                return;
+            }
+
+            // Update model viewer
+            const modelViewer = document.getElementById('modelViewer');
+            modelViewer.src = product.glb;
+
+            // Update product title
+            document.getElementById('productTitle').textContent = product.title;
+
+            // Update product price
+            document.getElementById('productPrice').textContent = product.price;
+
+            // Update product description
+            document.getElementById('productDescription').textContent = product.description;
+
+            // Render thumbnails
+            const thumbnailsContainer = document.getElementById('productThumbnails');
+            thumbnailsContainer.innerHTML = '';
+            product.thumbnails.forEach((thumb, index) => {
+                const thumbnail = document.createElement('div');
+                thumbnail.className = 'thumbnail' + (index === 0 ? ' active' : '');
+                thumbnail.setAttribute('data-image', thumb);
+                thumbnail.innerHTML = `<img src="${thumb}" alt="View ${index + 1}">`;
+                thumbnailsContainer.appendChild(thumbnail);
+            });
+
+            // Render colors
+            const colorOptionsContainer = document.getElementById('colorOptions');
+            colorOptionsContainer.innerHTML = '';
+            product.colors.forEach(color => {
+                const colorWrapper = document.createElement('div');
+                const colorOption = document.createElement('div');
+                colorOption.className = `color-option ${color.value}${color.active ? ' active' : ''}`;
+                colorOption.setAttribute('data-color', color.value);
+
+                const colorLabel = document.createElement('div');
+                colorLabel.className = 'color-label';
+                colorLabel.textContent = color.name;
+
+                colorWrapper.appendChild(colorOption);
+                colorWrapper.appendChild(colorLabel);
+                colorOptionsContainer.appendChild(colorWrapper);
+            });
+
+            // Render sizes
+            const sizeOptionsContainer = document.getElementById('sizeOptions');
+            sizeOptionsContainer.innerHTML = '';
+            product.sizes.forEach(size => {
+                const sizeOption = document.createElement('div');
+                sizeOption.className = 'size-option' + (size.active ? ' active' : '');
+                sizeOption.setAttribute('data-size', size.value);
+                sizeOption.textContent = size.label;
+                sizeOptionsContainer.appendChild(sizeOption);
+            });
+
+            // Thumbnail image switching (for model viewer or image)
+            const thumbnails = document.querySelectorAll('.thumbnail');
             thumbnails.forEach(thumbnail => {
                 thumbnail.addEventListener('click', function () {
                     thumbnails.forEach(t => t.classList.remove('active'));
                     this.classList.add('active');
                     const imageSrc = this.getAttribute('data-image');
-                    mainImage.src = imageSrc;
+                    // Update model viewer src if needed, or switch to image view
+                    // For now, we'll keep the model viewer as main view
                 });
             });
 
-            // Size selection
-            const sizeOptions = document.querySelectorAll('.size-option');
-            sizeOptions.forEach(option => {
-                option.addEventListener('click', function () {
-                    sizeOptions.forEach(opt => opt.classList.remove('active'));
-                    this.classList.add('active');
-                    console.log('Selected size:', this.getAttribute('data-size'));
-                });
-            });
-
-            // Color selection
+            // Color option click handler
             const colorOptions = document.querySelectorAll('.color-option');
             colorOptions.forEach(option => {
                 option.addEventListener('click', function () {
-                    colorOptions.forEach(opt => opt.classList.remove('active'));
+                    colorOptions.forEach(c => c.classList.remove('active'));
                     this.classList.add('active');
-                    console.log('Selected color:', this.getAttribute('data-color'));
                 });
             });
 
-            // Quantity controls
-            let quantity = 1;
-            const quantityValue = document.getElementById('quantityValue');
-            const decreaseBtn = document.getElementById('decreaseBtn');
-            const increaseBtn = document.getElementById('increaseBtn');
-
-            decreaseBtn.addEventListener('click', function () {
-                if (quantity > 1) {
-                    quantity--;
-                    quantityValue.textContent = quantity;
-                }
-            });
-
-            increaseBtn.addEventListener('click', function () {
-                quantity++;
-                quantityValue.textContent = quantity;
+            // Size option click handler
+            const sizeOptions = document.querySelectorAll('.size-option');
+            sizeOptions.forEach(option => {
+                option.addEventListener('click', function () {
+                    sizeOptions.forEach(s => s.classList.remove('active'));
+                    this.classList.add('active');
+                });
             });
 
             // Buy now button
             document.getElementById('buyNowBtn').addEventListener('click', function () {
-                console.log('Buy now clicked with quantity:', quantity);
-                alert('Chức năng mua ngay đang được phát triển!');
+                console.log('Buy now clicked for product:', product.id);
+                // Navigate to contact page or handle contact action
+                window.location.href = 'contact-form.html';
             });
 
-            // Add to cart button
-            document.getElementById('addToCartBtn').addEventListener('click', function () {
-                console.log('Add to cart clicked with quantity:', quantity);
-                alert('Đã thêm ' + quantity + ' sản phẩm vào giỏ hàng!');
+            // Load related products (all products except current one)
+            const relatedProductsGrid = document.getElementById('relatedProductsGrid');
+            const allProducts = getAllProducts();
+            const relatedProducts = allProducts.filter(p => p.id !== product.id).slice(0, 6);
+
+            relatedProductsGrid.innerHTML = '';
+            relatedProducts.forEach(relatedProduct => {
+                const productCard = document.createElement('div');
+                productCard.className = 'related-product-card';
+                productCard.setAttribute('data-product-id', relatedProduct.id);
+                productCard.innerHTML = `
+                    <div class="related-product-image">
+                        <img src="${relatedProduct.image}" alt="${relatedProduct.name}">
+                    </div>
+                    <div class="related-product-info">
+                        <h3>${relatedProduct.name}</h3>
+                        <p>${relatedProduct.price}</p>
+                    </div>
+                `;
+                relatedProductsGrid.appendChild(productCard);
             });
 
-            // Related products click - Reload page or navigate
-            const relatedProducts = document.querySelectorAll('.related-product-card');
-            relatedProducts.forEach(product => {
-                product.addEventListener('click', function () {
-                    const productName = this.querySelector('h3').textContent;
-                    console.log('Clicked related product:', productName);
-                    // Scroll to top and reload to show new product
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                    // In a real app, you would load different product data here
-                    setTimeout(() => {
-                        location.reload();
-                    }, 500);
-                });
+            // Related product click handler
+            relatedProductsGrid.addEventListener('click', function (e) {
+                const productCard = e.target.closest('.related-product-card');
+                if (productCard) {
+                    const relatedProductId = productCard.getAttribute('data-product-id');
+                    window.location.href = `product-detail.html?id=${relatedProductId}`;
+                }
             });
         });
     </script>
