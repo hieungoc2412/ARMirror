@@ -1,0 +1,10 @@
+# robots.txt for khung-guong-ar.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://khung-guong-ar.com/sitemap.xml
+
+# Disallow admin or private directories (if any)
+# Disallow: /admin/

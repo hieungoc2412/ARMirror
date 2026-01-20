@@ -12,8 +12,8 @@ const productsData = [
         glb: "DemoImage/glb/Model1.glb",
         thumbnails: [
             "DemoImage/image/Model1.jpg",
-            "productImage/15f429f06284eedab795.jpg",
-            "productImage/a51ac20c897805265c69.jpg"
+            "DemoImage/image/Model1.jpg",
+            "DemoImage/image/Model1.jpg"
         ],
         colors: [
             { name: "Vàng đồng", value: "gold", hex: "#D4AF37", active: true },
@@ -40,8 +40,8 @@ const productsData = [
         glb: "DemoImage/glb/Model2.glb",
         thumbnails: [
             "DemoImage/image/Model2.jpg",
-            "productImage/a51ac20c897805265c69.jpg",
-            "productImage/e9d657e91c9d90c3c98c.jpg"
+            "DemoImage/image/Model2.jpg",
+            "DemoImage/image/Model2.jpg"
         ],
         colors: [
             { name: "Trắng", value: "white", hex: "#FFFFFF", active: true },
@@ -68,8 +68,8 @@ const productsData = [
         glb: "DemoImage/glb/Model3.glb",
         thumbnails: [
             "DemoImage/image/Model3.jpg",
-            "productImage/e9d657e91c9d90c3c98c.jpg",
-            "productImage/f0da71ed3a99b6c7ef88.jpg"
+            "DemoImage/image/Model3.jpg",
+            "DemoImage/image/Model3.jpg"
         ],
         colors: [
             { name: "Viền bạc", value: "silver", hex: "#C0C0C0", active: true },
@@ -95,8 +95,8 @@ const productsData = [
         glb: "DemoImage/glb/Model4.glb",
         thumbnails: [
             "DemoImage/image/Model4.jpg",
-            "productImage/f0da71ed3a99b6c7ef88.jpg",
-            "productImage/15f429f06284eedab795.jpg"
+            "DemoImage/image/Model4.jpg",
+            "DemoImage/image/Model4.jpg"
         ],
         colors: [
             { name: "Vàng cổ", value: "antique-gold", hex: "#CFB53B", active: true },
@@ -123,8 +123,8 @@ const productsData = [
         glb: "DemoImage/glb/Model5.glb",
         thumbnails: [
             "DemoImage/image/Model5.jpg",
-            "productImage/15f429f06284eedab795.jpg",
-            "productImage/a51ac20c897805265c69.jpg"
+            "DemoImage/image/Model5.jpg",
+            "DemoImage/image/Model5.jpg"
         ],
         colors: [
             { name: "Gỗ sồi", value: "oak", hex: "#806517", active: true },
@@ -151,8 +151,8 @@ const productsData = [
         glb: "DemoImage/glb/Model6.glb",
         thumbnails: [
             "DemoImage/image/Model6.jpg",
-            "productImage/e9d657e91c9d90c3c98c.jpg",
-            "productImage/f0da71ed3a99b6c7ef88.jpg"
+            "DemoImage/image/Model6.jpg",
+            "DemoImage/image/Model6.jpg"
         ],
         colors: [
             { name: "Vàng", value: "gold", hex: "#FFD700", active: true },

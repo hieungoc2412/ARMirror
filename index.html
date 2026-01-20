@@ -4,8 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtMirror - Trang chủ</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>ArtMirror - Gương Trang Trí Nghệ Thuật | Trải Nghiệm AR</title>
+    <meta name="title" content="ArtMirror - Gương Trang Trí Nghệ Thuật | Trải Nghiệm AR">
+    <meta name="description" content="ArtMirror - Chuyên cung cấp gương trang trí nghệ thuật cao cấp với công nghệ AR. Xem trước gương trong không gian thật trước khi mua. Gương tròn, gương vuông, gương oval, gương đứng toàn thân.">
+    <meta name="keywords" content="gương trang trí, gương nghệ thuật, gương AR, gương decor, khung gương, gương treo tường, gương phòng khách, gương phòng ngủ, ArtMirror">
+    <meta name="author" content="ArtMirror">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://khung-guong-ar.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khung-guong-ar.com/">
+    <meta property="og:title" content="ArtMirror - Gương Trang Trí Nghệ Thuật | Trải Nghiệm AR">
+    <meta property="og:description" content="Trải nghiệm decor hiện đại với công nghệ AR. Xem trước gương trong không gian thật trước khi mua.">
+    <meta property="og:image" content="https://khung-guong-ar.com/banner/Banner3.png">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:site_name" content="ArtMirror">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://khung-guong-ar.com/">
+    <meta name="twitter:title" content="ArtMirror - Gương Trang Trí Nghệ Thuật | Trải Nghiệm AR">
+    <meta name="twitter:description" content="Trải nghiệm decor hiện đại với công nghệ AR. Xem trước gương trong không gian thật trước khi mua.">
+    <meta name="twitter:image" content="https://khung-guong-ar.com/banner/Banner3.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo/logo [Recovered]-01 1.png">
+    <link rel="apple-touch-icon" href="logo/logo [Recovered]-01 1.png">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ArtMirror",
+        "url": "https://khung-guong-ar.com",
+        "logo": "https://khung-guong-ar.com/logo/logo [Recovered]-01 1.png",
+        "description": "Chuyên cung cấp gương trang trí nghệ thuật cao cấp với công nghệ AR",
+        "sameAs": []
+    }
+    </script>
+
+    <!-- Structured Data - Website -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ArtMirror",
+        "url": "https://khung-guong-ar.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://khung-guong-ar.com/products.html?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -100,50 +158,8 @@
             </div>
 
             <div class="products-container">
-                <div class="products-grid">
-                    <!-- Product 1 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="productImage/15f429f06284eedab795.jpg" alt="Gương 1">
-                        </div>
-                        <div class="product-info">
-                            <h3>GƯƠNG 1</h3>
-                            <p class="product-price">xxx.000 đ</p>
-                        </div>
-                    </div>
-
-                    <!-- Product 2 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="productImage/a51ac20c897805265c69.jpg" alt="Gương 2">
-                        </div>
-                        <div class="product-info">
-                            <h3>GƯƠNG 2</h3>
-                            <p class="product-price">xxx.000 đ</p>
-                        </div>
-                    </div>
-
-                    <!-- Product 3 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="productImage/e9d657e91c9d90c3c98c.jpg" alt="Gương 3">
-                        </div>
-                        <div class="product-info">
-                            <h3>GƯƠNG 3</h3>
-                            <p class="product-price">xxx.000 đ</p>
-                        </div>
-                    </div>
-
-                    <!-- Product 4 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="productImage/f0da71ed3a99b6c7ef88.jpg" alt="Gương 4">
-                        </div>
-                        <div class="product-info">
-                            <h3>GƯƠNG 4</h3>
-                            <p class="product-price">xxx.000 đ</p>
-                        </div>
-                    </div>
+                <div class="products-grid" id="homeProductsGrid">
+                    <!-- Products will be loaded dynamically from products-data.js -->
                 </div>
 
                 <!-- View More Button -->
@@ -219,6 +235,43 @@
 
     <!-- Scripts - Include.js MUST come first -->
     <script src="include.js"></script>
+    <script src="products-data.js"></script>
+    <script>
+        // Load products on home page
+        document.addEventListener('DOMContentLoaded', function () {
+            const productsGrid = document.getElementById('homeProductsGrid');
+            
+            if (productsGrid) {
+                // Get first 4 products to display on homepage
+                const products = getAllProducts().slice(0, 4);
+                
+                products.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+                    productCard.setAttribute('data-product-id', product.id);
+                    productCard.innerHTML = `
+                        <div class="product-image">
+                            <img src="${product.image}" alt="${product.name}">
+                        </div>
+                        <div class="product-info">
+                            <h3>${product.name}</h3>
+                            <p class="product-price">${product.priceDisplay}</p>
+                        </div>
+                    `;
+                    productsGrid.appendChild(productCard);
+                });
+
+                // Click handler for product cards
+                productsGrid.addEventListener('click', function (e) {
+                    const productCard = e.target.closest('.product-card');
+                    if (productCard) {
+                        const productId = productCard.getAttribute('data-product-id');
+                        window.location.href = `product-detail.html?id=${productId}`;
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

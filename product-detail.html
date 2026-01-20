@@ -4,7 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtMirror - Chi tiết sản phẩm</title>
+    
+    <!-- Primary Meta Tags (will be updated dynamically) -->
+    <title>Chi Tiết Sản Phẩm | ArtMirror - Gương Trang Trí Nghệ Thuật</title>
+    <meta name="description" id="metaDescription" content="Xem chi tiết sản phẩm gương trang trí nghệ thuật tại ArtMirror. Trải nghiệm AR xem gương trong không gian thật.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (will be updated dynamically) -->
+    <meta property="og:type" content="product">
+    <meta property="og:url" id="ogUrl" content="https://khung-guong-ar.com/product-detail.html">
+    <meta property="og:title" id="ogTitle" content="Chi Tiết Sản Phẩm | ArtMirror">
+    <meta property="og:description" id="ogDescription" content="Gương trang trí nghệ thuật cao cấp từ ArtMirror">
+    <meta property="og:image" id="ogImage" content="https://khung-guong-ar.com/DemoImage/image/Model1.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo/logo [Recovered]-01 1.png">
+    
     <link rel="stylesheet" href="styles.css">
     <!-- Import model-viewer library -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
@@ -581,6 +596,19 @@
 
             // Update product price
             document.getElementById('productPrice').textContent = product.priceDisplay;
+
+            // Update SEO meta tags dynamically
+            document.title = `${product.title} | ArtMirror - ${product.priceDisplay}`;
+            document.getElementById('metaDescription')?.setAttribute('content', 
+                `${product.title} - ${product.description.substring(0, 150)}...`);
+            document.getElementById('ogUrl')?.setAttribute('content', 
+                `https://khung-guong-ar.com/product-detail.html?id=${product.id}`);
+            document.getElementById('ogTitle')?.setAttribute('content', 
+                `${product.title} | ArtMirror`);
+            document.getElementById('ogDescription')?.setAttribute('content', 
+                product.description.substring(0, 200));
+            document.getElementById('ogImage')?.setAttribute('content', 
+                `https://khung-guong-ar.com/${product.image}`);
 
             // Update product description
             document.getElementById('productDescription').textContent = product.description;
