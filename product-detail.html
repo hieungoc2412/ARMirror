@@ -4,25 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags (will be updated dynamically) -->
     <title>Chi Tiết Sản Phẩm | ArtMirror - Gương Trang Trí Nghệ Thuật</title>
-    <meta name="description" id="metaDescription" content="Xem chi tiết sản phẩm gương trang trí nghệ thuật tại ArtMirror. Trải nghiệm AR xem gương trong không gian thật.">
+    <meta name="description" id="metaDescription"
+        content="Xem chi tiết sản phẩm gương trang trí nghệ thuật tại ArtMirror. Trải nghiệm AR xem gương trong không gian thật.">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph (will be updated dynamically) -->
     <meta property="og:type" content="product">
     <meta property="og:url" id="ogUrl" content="https://khung-guong-ar.com/product-detail.html">
     <meta property="og:title" id="ogTitle" content="Chi Tiết Sản Phẩm | ArtMirror">
     <meta property="og:description" id="ogDescription" content="Gương trang trí nghệ thuật cao cấp từ ArtMirror">
     <meta property="og:image" id="ogImage" content="https://khung-guong-ar.com/DemoImage/image/Model1.jpg">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo/favicon-logo.png">
-    
+
     <!-- Google Analytics -->
     <script src="google-analytics.js"></script>
-    
+
     <link rel="stylesheet" href="styles.css">
     <!-- Import model-viewer library -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
@@ -127,10 +128,13 @@
         }
 
         .product-price {
-            font-size: 28px;
-            font-weight: 600;
+            font-size: 20px;
+            font-weight: 700;
             margin-bottom: 20px;
-            color: #FFD700;
+            color: #E8D5B7;
+            text-transform: uppercase;
+            letter-spacing: 3.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .product-rating {
@@ -334,6 +338,187 @@
             transform: translateY(-3px);
         }
 
+        /* Contact Modal Styles */
+        .contact-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            position: relative;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 28px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .modal-header h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .modal-header p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .modal-content .form-group {
+            margin-bottom: 20px;
+        }
+
+        .modal-content .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .modal-content .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .modal-content .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .modal-content .form-group input:focus {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .btn-cancel {
+            flex: 1;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cancel:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-submit {
+            flex: 1;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #CF7AAF 0%, #C3D5A5 100%);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(207, 122, 175, 0.4);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        @media (max-width: 576px) {
+            .modal-content {
+                padding: 30px 20px;
+            }
+
+            .modal-header h2 {
+                font-size: 24px;
+            }
+        }
+
         /* QR Code Section */
         .qr-code-section {
             margin-bottom: 30px;
@@ -471,6 +656,8 @@
             }
 
             .product-price {
+                font-size: 18px;
+                letter-spacing: 3px;
                 font-size: 22px;
             }
 
@@ -506,6 +693,8 @@
                     <div class="main-product-image">
                         <model-viewer id="modelViewer" src="" ar ar-modes="webxr scene-viewer quick-look"
                             camera-controls auto-rotate></model-viewer>
+                        <img id="productMainImage" src="" alt="Product Image"
+                            style="display: none; width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="product-thumbnails" id="productThumbnails">
                         <!-- Thumbnails will be loaded dynamically -->
@@ -544,6 +733,40 @@
                     <!-- Action Buttons -->
                     <div class="action-buttons">
                         <button class="btn-primary" id="buyNowBtn">Liên Hệ</button>
+                    </div>
+
+                    <!-- Contact Modal -->
+                    <div class="contact-modal" id="contactModal" style="display: none;">
+                        <div class="modal-overlay"></div>
+                        <div class="modal-content">
+                            <button class="modal-close" id="modalClose">&times;</button>
+                            <div class="modal-header">
+                                <h2>Liên hệ tư vấn</h2>
+                                <p>Để lại thông tin, chúng tôi sẽ liên hệ bạn sớm nhất!</p>
+                            </div>
+                            <form id="contactModalForm">
+                                <div class="form-group">
+                                    <label for="contactName">Họ và tên *</label>
+                                    <input type="text" id="contactName" name="contactName" required
+                                        placeholder="Nhập họ và tên">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactPhone">Số điện thoại *</label>
+                                    <input type="tel" id="contactPhone" name="contactPhone" required
+                                        placeholder="Nhập số điện thoại" pattern="[0-9]{10,11}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactAddress">Địa chỉ</label>
+                                    <input type="text" id="contactAddress" name="contactAddress"
+                                        placeholder="Nhập địa chỉ (tùy chọn)">
+                                </div>
+                                <div class="form-actions">
+                                    <button type="button" class="btn-cancel" id="cancelBtn">Hủy</button>
+                                    <button type="submit" class="btn-submit" id="submitContactBtn">Gửi thông
+                                        tin</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                     <br>
                     <!-- QR Code Section -->
@@ -590,9 +813,19 @@
                 return;
             }
 
-            // Update model viewer
+            // Update model viewer or image
             const modelViewer = document.getElementById('modelViewer');
-            modelViewer.src = product.glb;
+            const mainImage = document.getElementById('productMainImage');
+            if (product.glb) {
+                modelViewer.src = product.glb;
+                modelViewer.style.display = 'block';
+                mainImage.style.display = 'none';
+            } else {
+                // If no glb file, show image instead
+                modelViewer.style.display = 'none';
+                mainImage.src = product.image;
+                mainImage.style.display = 'block';
+            }
 
             // Update product title
             document.getElementById('productTitle').textContent = product.title;
@@ -602,15 +835,15 @@
 
             // Update SEO meta tags dynamically
             document.title = `${product.title} | ArtMirror - ${product.priceDisplay}`;
-            document.getElementById('metaDescription')?.setAttribute('content', 
+            document.getElementById('metaDescription')?.setAttribute('content',
                 `${product.title} - ${product.description.substring(0, 150)}...`);
-            document.getElementById('ogUrl')?.setAttribute('content', 
+            document.getElementById('ogUrl')?.setAttribute('content',
                 `https://khung-guong-ar.com/product-detail.html?id=${product.id}`);
-            document.getElementById('ogTitle')?.setAttribute('content', 
+            document.getElementById('ogTitle')?.setAttribute('content',
                 `${product.title} | ArtMirror`);
-            document.getElementById('ogDescription')?.setAttribute('content', 
+            document.getElementById('ogDescription')?.setAttribute('content',
                 product.description.substring(0, 200));
-            document.getElementById('ogImage')?.setAttribute('content', 
+            document.getElementById('ogImage')?.setAttribute('content',
                 `https://khung-guong-ar.com/${product.image}`);
 
             // Update product description
@@ -691,10 +924,148 @@
             });
 
             // Buy now button
-            document.getElementById('buyNowBtn').addEventListener('click', function () {
-                console.log('Buy now clicked for product:', product.id);
-                // Navigate to contact page or handle contact action
-                window.location.href = 'contact-form.html';
+            // Contact Modal
+            const contactModal = document.getElementById('contactModal');
+            const buyNowBtn = document.getElementById('buyNowBtn');
+            const modalClose = document.getElementById('modalClose');
+            const cancelBtn = document.getElementById('cancelBtn');
+            const contactModalForm = document.getElementById('contactModalForm');
+            const submitContactBtn = document.getElementById('submitContactBtn');
+
+            function openModal() {
+                contactModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                contactModal.style.display = 'none';
+                document.body.style.overflow = '';
+                contactModalForm.reset();
+            }
+
+            buyNowBtn.addEventListener('click', function () {
+                openModal();
+            });
+
+            modalClose.addEventListener('click', closeModal);
+            cancelBtn.addEventListener('click', closeModal);
+
+            // Close modal when clicking overlay
+            contactModal.querySelector('.modal-overlay').addEventListener('click', closeModal);
+
+            // Google Sheets URL - Thay thế bằng Web App URL từ Google Apps Script
+            const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycby1HrqhNbKd0sL59KLltoue25aM-nWCRcLYVnmXSKotIqXJe2aO0uzQVg2NOgiiY2KyHA/exec';
+            // API Key (nếu bạn sử dụng cách 2 trong hướng dẫn) - để trống nếu không dùng
+            const GOOGLE_SHEETS_API_KEY = '';
+
+            // Handle form submission
+            contactModalForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                const name = document.getElementById('contactName').value.trim();
+                const phone = document.getElementById('contactPhone').value.trim();
+                const address = document.getElementById('contactAddress').value.trim();
+
+                if (!name || !phone) {
+                    alert('Vui lòng điền đầy đủ họ tên và số điện thoại!');
+                    return;
+                }
+
+                const phoneRegex = /^[0-9]{10,11}$/;
+                if (!phoneRegex.test(phone)) {
+                    alert('Số điện thoại không hợp lệ! Vui lòng nhập 10-11 số.');
+                    return;
+                }
+
+                submitContactBtn.disabled = true;
+                submitContactBtn.textContent = 'Đang gửi...';
+
+                const now = new Date();
+                const formattedTime = now.toLocaleString('vi-VN', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: false
+                });
+
+                // Get product image URL (full URL)
+                const productImageUrl = `https://khung-guong-ar.com/${product.image}`;
+
+                const messageText = `🪞 THÔNG TIN KHÁCH HÀNG MỚI - SẢN PHẨM: ${product.name} 🪞
+
+📋 Họ tên: ${name}
+📱 Số điện thoại: ${phone}
+${address ? `📍 Địa chỉ: ${address}` : ''}
+🕐 Thời gian: ${formattedTime}
+
+🛍️ Sản phẩm quan tâm:
+- Tên: ${product.name}
+- Danh mục: ${product.categoryName}
+
+🖼️ Hình ảnh sản phẩm:
+${productImageUrl}
+
+✅ Đã tiếp nhận thông tin thành công!`;
+
+                const chatId = '2c04c1517b04925acb15';
+                const zaloApiUrl = `https://bot-api.zaloplatforms.com/bot688206804365173540:CiIFNPvqMoFJAYbNeWzqCaxBuDMFnXvGMgOtSDaOnSgagMWRErHyXcNFoJokPJrx/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(messageText)}`;
+
+                try {
+                    // Send to Zalo
+                    await fetch(zaloApiUrl, {
+                        method: 'POST',
+                        mode: 'no-cors'
+                    });
+
+                    // Save to Google Sheets (if URL is configured)
+                    if (GOOGLE_SHEETS_URL && GOOGLE_SHEETS_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
+                        try {
+                            const sheetsData = {
+                                timestamp: formattedTime,
+                                name: name,
+                                phone: phone,
+                                address: address || '',
+                                productName: product.name,
+                                productCategory: product.categoryName,
+                                productImage: productImageUrl
+                            };
+
+                            // Thêm API key nếu có
+                            if (GOOGLE_SHEETS_API_KEY) {
+                                sheetsData.key = GOOGLE_SHEETS_API_KEY;
+                            }
+
+                            await fetch(GOOGLE_SHEETS_URL, {
+                                method: 'POST',
+                                mode: 'no-cors',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify(sheetsData)
+                            });
+                        } catch (sheetsError) {
+                            console.error('Error saving to Google Sheets:', sheetsError);
+                            // Don't show error to user, Zalo message was sent successfully
+                        }
+                    }
+
+                    alert('Gửi thông tin thành công! Chúng tôi sẽ liên hệ bạn sớm nhất.');
+                    closeModal();
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Có lỗi xảy ra. Vui lòng thử lại sau!');
+                } finally {
+                    submitContactBtn.disabled = false;
+                    submitContactBtn.textContent = 'Gửi thông tin';
+                }
+            });
+
+            // Format phone input
+            document.getElementById('contactPhone').addEventListener('input', function (e) {
+                this.value = this.value.replace(/[^0-9]/g, '');
             });
 
             // Load related products (all products except current one)

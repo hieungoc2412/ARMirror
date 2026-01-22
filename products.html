@@ -58,12 +58,12 @@
 
         .filter-section h3 {
             color: white;
-            font-size: 16px;
-            font-weight: 700;
+            font-size: 15px;
+            font-weight: 600;
             margin-bottom: 18px;
-            text-align: center;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            text-align: left;
+            letter-spacing: 0.5px;
+            text-transform: none;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             padding-bottom: 12px;
         }
@@ -95,12 +95,7 @@
         }
 
         .search-filter::before {
-            content: "🔍";
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 16px;
+            display: none;
         }
 
         /* Category List */
@@ -120,20 +115,14 @@
             transition: all 0.3s ease;
             font-size: 14px;
             font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            display: block;
+            text-align: left;
         }
 
         .filter-item:hover,
         .filter-item.active {
             background: rgba(255, 255, 255, 0.3);
             border-color: rgba(255, 255, 255, 0.5);
-            transform: translateX(5px);
-        }
-
-        .filter-item .icon {
-            font-size: 18px;
         }
 
         /* Color Options */
@@ -370,7 +359,11 @@
         .product-item-info .product-price {
             font-size: 16px;
             font-weight: 700;
-            color: #FFD700;
+            color: #E8D5B7;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-top: 10px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         .product-colors-preview {
@@ -409,16 +402,86 @@
             font-size: 14px;
         }
 
+        /* Pagination */
+        .pagination-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .pagination {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pagination-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            padding: 10px 15px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pagination-btn:hover:not(:disabled) {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .pagination-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .pagination-pages {
+            display: flex;
+            gap: 5px;
+        }
+
+        .pagination-page {
+            min-width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .pagination-page:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .pagination-page.active {
+            background: rgba(255, 255, 255, 0.4);
+            border-color: rgba(255, 255, 255, 0.6);
+            font-weight: 700;
+        }
+
         /* Responsive */
         @media (max-width: 1200px) {
             .products-display-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
             }
         }
 
         @media (max-width: 968px) {
             .products-layout {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
 
             .filters-sidebar {
@@ -439,7 +502,7 @@
             .filter-list {
                 flex-direction: row;
                 flex-wrap: wrap;
-                justify-content: center;
+                gap: 8px;
             }
 
             .filter-item {
@@ -448,33 +511,88 @@
 
             .products-display-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .pagination {
+                flex-wrap: wrap;
+            }
+
+            .pagination-pages {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .products-page {
+                padding: 20px 15px;
+            }
+
+            .products-content {
+                padding: 25px 20px;
+            }
+
+            .products-display-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .product-item {
+                padding: 12px;
+            }
+
+            .product-item-info h3 {
+                font-size: 14px;
+            }
+
+            .product-price {
+                font-size: 14px;
+                letter-spacing: 2px;
             }
         }
 
         @media (max-width: 576px) {
             .products-page {
-                padding: 20px;
+                padding: 15px 10px;
             }
 
             .products-display-grid {
                 grid-template-columns: 1fr;
+                gap: 15px;
             }
 
             .products-header-title h2 {
-                font-size: 28px;
+                font-size: 24px;
             }
 
             .products-content {
-                padding: 25px 15px;
+                padding: 20px 15px;
             }
 
             .results-info {
                 flex-direction: column;
                 gap: 10px;
+                font-size: 12px;
             }
 
             .filter-section {
                 min-width: 100%;
+                padding: 20px 15px;
+            }
+
+            .filter-item {
+                padding: 10px 14px;
+                font-size: 13px;
+            }
+
+            .pagination-btn {
+                padding: 8px 12px;
+            }
+
+            .pagination-page {
+                min-width: 35px;
+                height: 35px;
+                font-size: 13px;
             }
         }
     </style>
@@ -492,7 +610,7 @@
                 <aside class="filters-sidebar">
                     <!-- Search -->
                     <div class="filter-section search-section">
-                        <h3>🔍 Tìm kiếm</h3>
+                        <h3>Tìm kiếm</h3>
                         <div class="search-filter">
                             <input type="text" id="searchInput" placeholder="Nhập tên gương...">
                         </div>
@@ -500,39 +618,23 @@
 
                     <!-- Categories -->
                     <div class="filter-section">
-                        <h3>📂 Danh mục</h3>
+                        <h3>Danh mục</h3>
                         <div class="filter-list" id="categoryList">
                             <!-- Categories will be loaded dynamically -->
                         </div>
                     </div>
 
-                    <!-- Price Range -->
-                    <div class="filter-section">
-                        <h3>💰 Khoảng giá</h3>
-                        <select class="filter-select" id="priceFilter">
-                            <!-- Price ranges will be loaded dynamically -->
-                        </select>
-                    </div>
-
                     <!-- Colors -->
                     <div class="filter-section">
-                        <h3>🎨 Màu sắc</h3>
+                        <h3>Màu sắc</h3>
                         <div class="color-filter-list" id="colorFilter">
                             <!-- Colors will be loaded dynamically -->
                         </div>
                     </div>
 
-                    <!-- Sizes -->
-                    <div class="filter-section">
-                        <h3>📏 Kích thước</h3>
-                        <select class="filter-select" id="sizeFilter">
-                            <!-- Sizes will be loaded dynamically -->
-                        </select>
-                    </div>
-
                     <!-- Reset Button -->
                     <button class="reset-filters-btn" id="resetFilters">
-                        🔄 Xóa bộ lọc
+                        Xóa bộ lọc
                     </button>
                 </aside>
 
@@ -547,8 +649,6 @@
                         <span class="results-count" id="resultsCount">Hiển thị 6 sản phẩm</span>
                         <select class="sort-select" id="sortSelect">
                             <option value="default">Sắp xếp: Mặc định</option>
-                            <option value="price-asc">Giá: Thấp đến Cao</option>
-                            <option value="price-desc">Giá: Cao đến Thấp</option>
                             <option value="name-asc">Tên: A-Z</option>
                             <option value="name-desc">Tên: Z-A</option>
                         </select>
@@ -564,6 +664,23 @@
                         <div class="no-results-icon">🔍</div>
                         <h3>Không tìm thấy sản phẩm</h3>
                         <p>Thử thay đổi bộ lọc hoặc từ khóa tìm kiếm</p>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination-container" id="paginationContainer" style="display: none;">
+                        <div class="pagination">
+                            <button class="pagination-btn" id="prevPage" disabled>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <div class="pagination-pages" id="paginationPages"></div>
+                            <button class="pagination-btn" id="nextPage">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -582,22 +699,26 @@
             const productsGrid = document.getElementById('productsGrid');
             const searchInput = document.getElementById('searchInput');
             const categoryList = document.getElementById('categoryList');
-            const priceFilter = document.getElementById('priceFilter');
             const colorFilter = document.getElementById('colorFilter');
-            const sizeFilter = document.getElementById('sizeFilter');
             const sortSelect = document.getElementById('sortSelect');
             const resultsCount = document.getElementById('resultsCount');
             const noResults = document.getElementById('noResults');
             const resetFilters = document.getElementById('resetFilters');
+            const paginationContainer = document.getElementById('paginationContainer');
+            const paginationPages = document.getElementById('paginationPages');
+            const prevPageBtn = document.getElementById('prevPage');
+            const nextPageBtn = document.getElementById('nextPage');
 
             // Current filters state
             let currentFilters = {
                 search: '',
                 category: 'all',
-                priceRange: 'all',
-                color: 'all',
-                size: 'all'
+                color: 'all'
             };
+
+            // Pagination state
+            let currentPage = 1;
+            const itemsPerPage = 9; // 6-9 sản phẩm/trang
 
             // Initialize filters
             function initFilters() {
@@ -608,18 +729,8 @@
                     const item = document.createElement('div');
                     item.className = 'filter-item' + (cat.id === 'all' ? ' active' : '');
                     item.setAttribute('data-category', cat.id);
-                    item.innerHTML = `<span class="icon">${cat.icon}</span> ${cat.name}`;
+                    item.textContent = cat.name;
                     categoryList.appendChild(item);
-                });
-
-                // Load price ranges
-                const priceRanges = getPriceRanges();
-                priceFilter.innerHTML = '';
-                priceRanges.forEach(range => {
-                    const option = document.createElement('option');
-                    option.value = range.id;
-                    option.textContent = range.name;
-                    priceFilter.appendChild(option);
                 });
 
                 // Load colors
@@ -644,34 +755,43 @@
                     }
                     colorFilter.appendChild(item);
                 });
-
-                // Load sizes
-                const sizes = getSizes();
-                sizeFilter.innerHTML = '<option value="all">Tất cả kích thước</option>';
-                sizes.forEach(size => {
-                    const option = document.createElement('option');
-                    option.value = size.value;
-                    option.textContent = size.name;
-                    sizeFilter.appendChild(option);
-                });
             }
 
-            // Render products
+            // Render products with pagination
             function renderProducts(products) {
                 productsGrid.innerHTML = '';
                 
                 if (products.length === 0) {
                     productsGrid.style.display = 'none';
                     noResults.style.display = 'block';
+                    paginationContainer.style.display = 'none';
                     resultsCount.textContent = 'Không tìm thấy sản phẩm';
                     return;
                 }
 
                 productsGrid.style.display = 'grid';
                 noResults.style.display = 'none';
-                resultsCount.textContent = `Hiển thị ${products.length} sản phẩm`;
 
-                products.forEach(product => {
+                // Calculate pagination
+                const totalPages = Math.ceil(products.length / itemsPerPage);
+                
+                // Ensure currentPage is within valid range
+                if (currentPage > totalPages && totalPages > 0) {
+                    currentPage = totalPages;
+                }
+                if (currentPage < 1) {
+                    currentPage = 1;
+                }
+                
+                const startIndex = (currentPage - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                const paginatedProducts = products.slice(startIndex, endIndex);
+
+                // Update results count
+                resultsCount.textContent = `Hiển thị ${startIndex + 1}-${Math.min(endIndex, products.length)} / ${products.length} sản phẩm`;
+
+                // Render products for current page
+                paginatedProducts.forEach(product => {
                     const productItem = document.createElement('div');
                     productItem.className = 'product-item';
                     productItem.setAttribute('data-product-id', product.id);
@@ -696,25 +816,125 @@
                     `;
                     productsGrid.appendChild(productItem);
                 });
+
+                // Render pagination
+                renderPagination(totalPages);
             }
 
+            // Render pagination
+            function renderPagination(totalPages) {
+                if (totalPages <= 1) {
+                    paginationContainer.style.display = 'none';
+                    return;
+                }
+
+                paginationContainer.style.display = 'flex';
+                paginationPages.innerHTML = '';
+
+                // Previous button state
+                prevPageBtn.disabled = currentPage === 1;
+                nextPageBtn.disabled = currentPage === totalPages;
+
+                // Calculate which pages to show
+                let startPage = Math.max(1, currentPage - 2);
+                let endPage = Math.min(totalPages, currentPage + 2);
+
+                // Adjust if near start or end
+                if (endPage - startPage < 4) {
+                    if (startPage === 1) {
+                        endPage = Math.min(5, totalPages);
+                    } else {
+                        startPage = Math.max(1, totalPages - 4);
+                    }
+                }
+
+                // First page
+                if (startPage > 1) {
+                    const firstPage = document.createElement('button');
+                    firstPage.className = 'pagination-page';
+                    firstPage.textContent = '1';
+                    firstPage.addEventListener('click', () => {
+                        currentPage = 1;
+                        renderCurrentPage();
+                    });
+                    paginationPages.appendChild(firstPage);
+                    if (startPage > 2) {
+                        const ellipsis = document.createElement('span');
+                        ellipsis.textContent = '...';
+                        ellipsis.style.color = 'white';
+                        ellipsis.style.padding = '0 5px';
+                        paginationPages.appendChild(ellipsis);
+                    }
+                }
+
+                // Page numbers
+                for (let i = startPage; i <= endPage; i++) {
+                    const pageBtn = document.createElement('button');
+                    pageBtn.className = 'pagination-page' + (i === currentPage ? ' active' : '');
+                    pageBtn.textContent = i;
+                    pageBtn.addEventListener('click', () => {
+                        currentPage = i;
+                        renderCurrentPage();
+                    });
+                    paginationPages.appendChild(pageBtn);
+                }
+
+                // Last page
+                if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) {
+                        const ellipsis = document.createElement('span');
+                        ellipsis.textContent = '...';
+                        ellipsis.style.color = 'white';
+                        ellipsis.style.padding = '0 5px';
+                        paginationPages.appendChild(ellipsis);
+                    }
+                    const lastPage = document.createElement('button');
+                    lastPage.className = 'pagination-page';
+                    lastPage.textContent = totalPages;
+                    lastPage.addEventListener('click', () => {
+                        currentPage = totalPages;
+                        renderCurrentPage();
+                    });
+                    paginationPages.appendChild(lastPage);
+                }
+            }
+
+            // Store filtered and sorted products
+            let filteredAndSortedProducts = [];
+
             // Apply filters and sort
-            function applyFiltersAndSort() {
+            function applyFiltersAndSort(resetPage = true) {
+                // Reset to first page when filters change (unless explicitly told not to)
+                if (resetPage) {
+                    currentPage = 1;
+                }
+                
                 let filteredProducts = filterProducts(currentFilters);
                 
                 // Apply sorting
                 const sortValue = sortSelect.value;
-                if (sortValue === 'price-asc') {
-                    filteredProducts.sort((a, b) => a.price - b.price);
-                } else if (sortValue === 'price-desc') {
-                    filteredProducts.sort((a, b) => b.price - a.price);
-                } else if (sortValue === 'name-asc') {
+                if (sortValue === 'name-asc') {
                     filteredProducts.sort((a, b) => a.name.localeCompare(b.name, 'vi'));
                 } else if (sortValue === 'name-desc') {
                     filteredProducts.sort((a, b) => b.name.localeCompare(a.name, 'vi'));
                 }
 
-                renderProducts(filteredProducts);
+                // Store the filtered and sorted products
+                filteredAndSortedProducts = filteredProducts;
+                
+                renderProducts(filteredAndSortedProducts);
+                
+                // Scroll to top when filters/sort change
+                if (resetPage) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }
+
+            // Render products with current page (without resetting filters)
+            function renderCurrentPage() {
+                renderProducts(filteredAndSortedProducts);
+                // Scroll to top of page
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
 
             // Event Listeners
@@ -739,12 +959,6 @@
                 }
             });
 
-            // Price filter
-            priceFilter.addEventListener('change', function () {
-                currentFilters.priceRange = this.value;
-                applyFiltersAndSort();
-            });
-
             // Color filter
             colorFilter.addEventListener('click', function (e) {
                 const item = e.target.closest('.color-filter-item');
@@ -756,10 +970,20 @@
                 }
             });
 
-            // Size filter
-            sizeFilter.addEventListener('change', function () {
-                currentFilters.size = this.value;
-                applyFiltersAndSort();
+            // Pagination buttons
+            prevPageBtn.addEventListener('click', function () {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderCurrentPage();
+                }
+            });
+
+            nextPageBtn.addEventListener('click', function () {
+                const totalPages = Math.ceil(filteredAndSortedProducts.length / itemsPerPage);
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderCurrentPage();
+                }
             });
 
             // Sort
@@ -772,14 +996,10 @@
                 currentFilters = {
                     search: '',
                     category: 'all',
-                    priceRange: 'all',
-                    color: 'all',
-                    size: 'all'
+                    color: 'all'
                 };
 
                 searchInput.value = '';
-                priceFilter.value = 'all';
-                sizeFilter.value = 'all';
                 sortSelect.value = 'default';
 
                 document.querySelectorAll('#categoryList .filter-item').forEach(i => i.classList.remove('active'));

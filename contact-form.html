@@ -447,6 +447,11 @@
             const successMessage = document.getElementById('successMessage');
             const errorMessage = document.getElementById('errorMessage');
 
+            // Google Sheets URL - Thay thế bằng Web App URL từ Google Apps Script
+            const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzWNsJvsBmswXxtUseGvUDGC37n2opsnWggYoP2px2yn2HfPaHnNlSP3nC7PZVcSS4L/exec';
+            // API Key (nếu bạn sử dụng cách 2 trong hướng dẫn) - để trống nếu không dùng
+            const GOOGLE_SHEETS_API_KEY = '';
+
             form.addEventListener('submit', async function(e) {
                 e.preventDefault();
                 
@@ -491,13 +496,46 @@
 ✅ Đã tiếp nhận thông tin thành công!`;
 
                 const chatId = '2c04c1517b04925acb15';
-                const apiUrl = `https://bot-api.zaloplatforms.com/bot688206804365173540:CiIFNPvqMoFJAYbNeWzqCaxBuDMFnXvGMgOtSDaOnSgagMWRErHyXcNFoJokPJrx/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(messageText)}`;
+                const zaloApiUrl = `https://bot-api.zaloplatforms.com/bot688206804365173540:CiIFNPvqMoFJAYbNeWzqCaxBuDMFnXvGMgOtSDaOnSgagMWRErHyXcNFoJokPJrx/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(messageText)}`;
 
                 try {
-                    await fetch(apiUrl, {
+                    // Send to Zalo
+                    await fetch(zaloApiUrl, {
                         method: 'POST',
                         mode: 'no-cors'
                     });
+
+                    // Save to Google Sheets (if URL is configured)
+                    if (GOOGLE_SHEETS_URL && GOOGLE_SHEETS_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
+                        try {
+                            const sheetsData = {
+                                timestamp: formattedTime,
+                                name: fullName,
+                                phone: phone,
+                                address: '',
+                                productName: '',
+                                productCategory: '',
+                                productImage: ''
+                            };
+
+                            // Thêm API key nếu có
+                            if (GOOGLE_SHEETS_API_KEY) {
+                                sheetsData.key = GOOGLE_SHEETS_API_KEY;
+                            }
+
+                            await fetch(GOOGLE_SHEETS_URL, {
+                                method: 'POST',
+                                mode: 'no-cors',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify(sheetsData)
+                            });
+                        } catch (sheetsError) {
+                            console.error('Error saving to Google Sheets:', sheetsError);
+                            // Don't show error to user, Zalo message was sent successfully
+                        }
+                    }
 
                     formContent.style.display = 'none';
                     successMessage.classList.add('show');

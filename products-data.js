@@ -5,9 +5,9 @@ const productsData = [
         name: "Gương Tròn Baroque",
         title: "Gương Tròn Baroque Cổ Điển",
         category: "guong-tron",
-        categoryName: "Gương tròn",
-        price: 1250000,
-        priceDisplay: "1.250.000 đ",
+        categoryName: "Gương trang trí",
+        price: "Liên hệ",
+        priceDisplay: "Liên hệ",
         image: "DemoImage/image/Model1.jpg",
         glb: "DemoImage/glb/Model1.glb",
         thumbnails: [
@@ -22,11 +22,11 @@ const productsData = [
         ],
         sizes: [
             { value: "40cm", label: "Ø 40cm", priceAdd: 0 },
-            { value: "50cm", label: "Ø 50cm", priceAdd: 200000, active: true },
-            { value: "60cm", label: "Ø 60cm", priceAdd: 400000 },
-            { value: "80cm", label: "Ø 80cm", priceAdd: 700000 }
+            { value: "50cm", label: "Ø 50cm", priceAdd: 0, active: true },
+            { value: "60cm", label: "Ø 60cm", priceAdd: 0 },
+            { value: "80cm", label: "Ø 80cm", priceAdd: 0 }
         ],
-        description: "Gương tròn Baroque phong cách cổ điển Châu Âu, được chế tác tinh xảo với họa tiết phức tạp, mang đến vẻ đẹp sang trọng và đẳng cấp. Khung gương được làm từ hợp kim cao cấp, phủ lớp sơn vàng đồng sáng bóng, tạo nên điểm nhấn hoàn hảo cho không gian nội thất."
+        description: "Gương tròn Baroque phong cách cổ điển Châu Âu, được chế tác tinh xảo với họa tiết phức tạp, mang đến vẻ đẹp sang trọng và đẳng cấp. Khung gương được làm từ hợp kim cao cấp, phủ lớp sơn vàng đồng sáng bóng, tạo nên điểm nhấn hoàn hảo cho không gian nội thất. Sản phẩm kết hợp giữa nghệ thuật truyền thống và công nghệ AR hiện đại, cho phép bạn trải nghiệm và hình dung sản phẩm trong không gian thực tế trước khi quyết định."
     },
     {
         id: 2,
@@ -34,8 +34,8 @@ const productsData = [
         title: "Gương Vuông Phong Cách Tối Giản",
         category: "guong-vuong",
         categoryName: "Gương vuông",
-        price: 890000,
-        priceDisplay: "890.000 đ",
+        price: "Liên hệ",
+        priceDisplay: "Liên hệ",
         image: "DemoImage/image/Model2.jpg",
         glb: "DemoImage/glb/Model2.glb",
         thumbnails: [
@@ -50,11 +50,11 @@ const productsData = [
         ],
         sizes: [
             { value: "40x40", label: "40x40 cm", priceAdd: 0, active: true },
-            { value: "50x50", label: "50x50 cm", priceAdd: 150000 },
-            { value: "60x60", label: "60x60 cm", priceAdd: 300000 },
-            { value: "80x80", label: "80x80 cm", priceAdd: 500000 }
+            { value: "50x50", label: "50x50 cm", priceAdd: 0 },
+            { value: "60x60", label: "60x60 cm", priceAdd: 0 },
+            { value: "80x80", label: "80x80 cm", priceAdd: 0 }
         ],
-        description: "Gương vuông hiện đại với thiết kế tối giản, phù hợp với không gian nội thất hiện đại. Khung gương được làm từ chất liệu nhôm cao cấp, mang đến vẻ đẹp thanh lịch và sang trọng."
+        description: "Gương vuông hiện đại với thiết kế tối giản, phù hợp với không gian nội thất hiện đại. Khung gương được làm từ chất liệu nhôm cao cấp, mang đến vẻ đẹp thanh lịch và sang trọng. Thiết kế clean và minimalist này tạo điểm nhấn tinh tế, không làm lấn át không gian mà lại nâng tầm thẩm mỹ tổng thể. Hoàn hảo cho những ai yêu thích phong cách Scandinavian và contemporary."
     },
     {
         id: 3,
@@ -62,8 +62,8 @@ const productsData = [
         title: "Gương Tròn Đèn LED Thông Minh",
         category: "guong-tron",
         categoryName: "Gương tròn",
-        price: 2100000,
-        priceDisplay: "2.100.000 đ",
+        price: "Liên hệ",
+        priceDisplay: "Liên hệ",
         image: "DemoImage/image/Model3.jpg",
         glb: "DemoImage/glb/Model3.glb",
         thumbnails: [
@@ -77,11 +77,11 @@ const productsData = [
         ],
         sizes: [
             { value: "50cm", label: "Ø 50cm", priceAdd: 0 },
-            { value: "60cm", label: "Ø 60cm", priceAdd: 300000, active: true },
-            { value: "80cm", label: "Ø 80cm", priceAdd: 600000 },
-            { value: "100cm", label: "Ø 100cm", priceAdd: 900000 }
+            { value: "60cm", label: "Ø 60cm", priceAdd: 0, active: true },
+            { value: "80cm", label: "Ø 80cm", priceAdd: 0 },
+            { value: "100cm", label: "Ø 100cm", priceAdd: 0 }
         ],
-        description: "Gương tròn với đèn LED tích hợp, có 3 chế độ ánh sáng (trắng, vàng, trung tính). Tính năng chống sương mù, cảm ứng chạm điều chỉnh độ sáng. Phù hợp cho phòng tắm và phòng trang điểm."
+        description: "Gương tròn với đèn LED tích hợp, có 3 chế độ ánh sáng (trắng, vàng, trung tính). Tính năng chống sương mù, cảm ứng chạm điều chỉnh độ sáng. Phù hợp cho phòng tắm và phòng trang điểm. Công nghệ LED hiện đại mang đến ánh sáng tự nhiên, giúp bạn luôn tự tin với vẻ ngoài hoàn hảo. Thiết kế không dây, an toàn và tiện lợi cho mọi không gian."
     },
     {
         id: 4,
@@ -89,8 +89,8 @@ const productsData = [
         title: "Gương Oval Phong Cách Cổ Điển",
         category: "guong-oval",
         categoryName: "Gương oval",
-        price: 1680000,
-        priceDisplay: "1.680.000 đ",
+        price: "Liên hệ",
+        priceDisplay: "Liên hệ",
         image: "DemoImage/image/Model4.jpg",
         glb: "DemoImage/glb/Model4.glb",
         thumbnails: [
@@ -105,20 +105,20 @@ const productsData = [
         ],
         sizes: [
             { value: "40x60", label: "40x60 cm", priceAdd: 0 },
-            { value: "50x70", label: "50x70 cm", priceAdd: 250000, active: true },
-            { value: "60x80", label: "60x80 cm", priceAdd: 450000 },
-            { value: "70x100", label: "70x100 cm", priceAdd: 700000 }
+            { value: "50x70", label: "50x70 cm", priceAdd: 0, active: true },
+            { value: "60x80", label: "60x80 cm", priceAdd: 0 },
+            { value: "70x100", label: "70x100 cm", priceAdd: 0 }
         ],
-        description: "Gương oval phong cách vintage với khung hoa văn tinh xảo, mang đến vẻ đẹp hoài cổ và sang trọng. Thích hợp cho phòng khách, phòng ngủ hoặc hành lang."
+        description: "Gương oval phong cách vintage với khung hoa văn tinh xảo, mang đến vẻ đẹp hoài cổ và sang trọng. Thích hợp cho phòng khách, phòng ngủ hoặc hành lang. Hình dáng oval mềm mại tạo cảm giác ấm cúng và thân thiện, trong khi các chi tiết cổ điển trên khung gương thể hiện sự tinh tế và đẳng cấp. Sản phẩm là sự kết hợp hoàn hảo giữa nét đẹp xưa và công nghệ AR hiện đại."
     },
     {
         id: 5,
         name: "Gương Toàn Thân",
         title: "Gương Đứng Toàn Thân Khung Gỗ",
         category: "guong-dung",
-        categoryName: "Gương đứng",
-        price: 2450000,
-        priceDisplay: "2.450.000 đ",
+        categoryName: "Gương trang trí",
+        price: "Liên hệ",
+        priceDisplay: "Liên hệ",
         image: "DemoImage/image/Model5.jpg",
         glb: "DemoImage/glb/Model5.glb",
         thumbnails: [
@@ -134,10 +134,10 @@ const productsData = [
         ],
         sizes: [
             { value: "50x150", label: "50x150 cm", priceAdd: 0, active: true },
-            { value: "60x170", label: "60x170 cm", priceAdd: 400000 },
-            { value: "70x180", label: "70x180 cm", priceAdd: 700000 }
+            { value: "60x170", label: "60x170 cm", priceAdd: 0 },
+            { value: "70x180", label: "70x180 cm", priceAdd: 0 }
         ],
-        description: "Gương đứng toàn thân với khung gỗ tự nhiên cao cấp, thiết kế đơn giản nhưng sang trọng. Có thể đặt sàn hoặc treo tường, phù hợp cho phòng ngủ và phòng thay đồ."
+        description: "Gương đứng toàn thân với khung gỗ tự nhiên cao cấp, thiết kế đơn giản nhưng sang trọng. Có thể đặt sàn hoặc treo tường, phù hợp cho phòng ngủ và phòng thay đồ. Khung gỗ được xử lý tinh tế, giữ nguyên vẻ đẹp tự nhiên của gỗ, tạo cảm giác ấm áp và gần gũi. Kích thước lớn cho phép bạn nhìn toàn bộ trang phục, là vật dụng không thể thiếu cho tủ quần áo hiện đại."
     },
     {
         id: 6,
@@ -145,8 +145,8 @@ const productsData = [
         title: "Gương Trang Trí Nghệ Thuật Sunburst",
         category: "guong-trang-tri",
         categoryName: "Gương trang trí",
-        price: 1890000,
-        priceDisplay: "1.890.000 đ",
+        price: "Liên hệ",
+        priceDisplay: "Liên hệ",
         image: "DemoImage/image/Model6.jpg",
         glb: "DemoImage/glb/Model6.glb",
         thumbnails: [
@@ -161,10 +161,221 @@ const productsData = [
         ],
         sizes: [
             { value: "60cm", label: "Ø 60cm", priceAdd: 0, active: true },
-            { value: "80cm", label: "Ø 80cm", priceAdd: 350000 },
-            { value: "100cm", label: "Ø 100cm", priceAdd: 650000 }
+            { value: "80cm", label: "Ø 80cm", priceAdd: 0 },
+            { value: "100cm", label: "Ø 100cm", priceAdd: 0 }
         ],
-        description: "Gương trang trí nghệ thuật kiểu Sunburst với các tia sáng tỏa ra từ trung tâm, tạo điểm nhấn ấn tượng cho không gian. Thích hợp làm điểm nhấn cho phòng khách hoặc phòng ăn."
+        description: "Gương trang trí nghệ thuật kiểu Sunburst với các tia sáng tỏa ra từ trung tâm, tạo điểm nhấn ấn tượng cho không gian. Thích hợp làm điểm nhấn cho phòng khách hoặc phòng ăn. Thiết kế độc đáo này lấy cảm hứng từ ánh mặt trời, mang đến năng lượng tích cực và sự ấm áp cho ngôi nhà. Mỗi chi tiết được chế tác thủ công tỉ mỉ, thể hiện sự tinh tế và đẳng cấp trong từng đường nét."
+    },
+    {
+        id: 7,
+        name: "AR Round Basic",
+        title: "AR Round Basic - Gương Tròn Cơ Bản",
+        category: "guong-tron",
+        categoryName: "Gương tròn",
+        price: "Liên hệ",
+        priceDisplay: "Liên hệ",
+        image: "DemoImage/image/RM01.jpg",
+        glb: null,
+        thumbnails: [
+            "DemoImage/image/RM01.jpg",
+            "DemoImage/image/RM01.jpg",
+            "DemoImage/image/RM01.jpg"
+        ],
+        colors: [
+            { name: "Gỗ tự nhiên", value: "wood", hex: "#8B4513", active: true },
+            { name: "Trắng", value: "white", hex: "#FFFFFF" },
+            { name: "Đen", value: "black", hex: "#333333" }
+        ],
+        sizes: [
+            { value: "60cm", label: "Ø 60cm", priceAdd: 0, active: true },
+            { value: "70cm", label: "Ø 70cm", priceAdd: 0 },
+            { value: "80cm", label: "Ø 80cm", priceAdd: 0 }
+        ],
+        description: "Gương tròn cơ bản với thiết kế tinh giản, phù hợp cho mọi không gian sống. Khung gỗ tự nhiên cao cấp mang đến vẻ đẹp ấm áp và gần gũi. Sản phẩm được chế tác tỉ mỉ, đảm bảo độ bền và tính thẩm mỹ cao. Hoàn hảo cho những ai yêu thích phong cách tối giản nhưng vẫn muốn có điểm nhấn cho không gian nội thất."
+    },
+    {
+        id: 8,
+        name: "AR Round Standard",
+        title: "AR Round Standard - Gương Tròn Tiêu Chuẩn",
+        category: "guong-tron",
+        categoryName: "Gương tròn",
+        price: "Liên hệ",
+        priceDisplay: "Liên hệ",
+        image: "DemoImage/image/RM02.jpg",
+        glb: null,
+        thumbnails: [
+            "DemoImage/image/RM02.jpg",
+            "DemoImage/image/RM02.jpg",
+            "DemoImage/image/RM02.jpg"
+        ],
+        colors: [
+            { name: "Gỗ cao cấp", value: "premium-wood", hex: "#654321", active: true },
+            { name: "Vàng đồng", value: "gold", hex: "#D4AF37" },
+            { name: "Bạc", value: "silver", hex: "#C0C0C0" }
+        ],
+        sizes: [
+            { value: "60cm", label: "Ø 60cm", priceAdd: 0, active: true },
+            { value: "70cm", label: "Ø 70cm", priceAdd: 0 },
+            { value: "80cm", label: "Ø 80cm", priceAdd: 0 }
+        ],
+        description: "Gương tròn tiêu chuẩn với chất liệu và hoàn thiện nâng cấp, mang đến vẻ đẹp sang trọng hơn so với phiên bản cơ bản. Khung được làm từ gỗ cao cấp với lớp phủ bảo vệ chuyên nghiệp, đảm bảo độ bền theo thời gian. Thiết kế cân đối và hài hòa, tạo điểm nhấn tinh tế cho phòng khách, phòng ngủ hoặc hành lang."
+    },
+    {
+        id: 9,
+        name: "AR Round Premium",
+        title: "AR Round Premium - Gương Tròn Cao Cấp",
+        category: "guong-tron",
+        categoryName: "Gương tròn",
+        price: "Liên hệ",
+        priceDisplay: "Liên hệ",
+        image: "DemoImage/image/RM03.jpg",
+        glb: null,
+        thumbnails: [
+            "DemoImage/image/RM03.jpg",
+            "DemoImage/image/RM03.jpg",
+            "DemoImage/image/RM03.jpg"
+        ],
+        colors: [
+            { name: "Gỗ nghệ thuật", value: "art-wood", hex: "#5C4033", active: true },
+            { name: "Vàng kim loại", value: "metallic-gold", hex: "#FFD700" },
+            { name: "Bạc cao cấp", value: "premium-silver", hex: "#E8E8E8" }
+        ],
+        sizes: [
+            { value: "60cm", label: "Ø 60cm", priceAdd: 0, active: true },
+            { value: "70cm", label: "Ø 70cm", priceAdd: 0 },
+            { value: "80cm", label: "Ø 80cm", priceAdd: 0 }
+        ],
+        description: "Gương tròn cao cấp với thiết kế và chất liệu đỉnh cao, dành cho những không gian sang trọng và đẳng cấp. Khung gỗ nghệ thuật được chế tác thủ công tỉ mỉ, mỗi chi tiết đều thể hiện sự tinh xảo và chuyên nghiệp. Sản phẩm không chỉ là vật dụng trang trí mà còn là tác phẩm nghệ thuật, nâng tầm giá trị cho không gian sống của bạn."
+    },
+    {
+        id: 10,
+        name: "AR Square Basic",
+        title: "AR Square Basic - Gương Vuông Cơ Bản",
+        category: "guong-vuong",
+        categoryName: "Gương vuông",
+        price: "Liên hệ",
+        priceDisplay: "Liên hệ",
+        image: "DemoImage/image/SQ01.jpg",
+        glb: null,
+        thumbnails: [
+            "DemoImage/image/SQ01.jpg",
+            "DemoImage/image/SQ01.jpg",
+            "DemoImage/image/SQ01.jpg"
+        ],
+        colors: [
+            { name: "Gỗ tự nhiên", value: "wood", hex: "#8B4513", active: true },
+            { name: "Trắng", value: "white", hex: "#FFFFFF" },
+            { name: "Đen", value: "black", hex: "#333333" }
+        ],
+        sizes: [
+            { value: "60x80", label: "60×80 cm", priceAdd: 0, active: true },
+            { value: "70x100", label: "70×100 cm", priceAdd: 0 }
+        ],
+        description: "Gương vuông cơ bản với thiết kế hiện đại và tối giản, phù hợp cho không gian sống đương đại. Khung gỗ tự nhiên mang đến vẻ đẹp ấm áp, trong khi hình dáng vuông vức tạo cảm giác ổn định và cân đối. Sản phẩm lý tưởng cho phòng khách, phòng ngủ hoặc văn phòng làm việc, tạo điểm nhấn tinh tế mà không làm lấn át không gian."
+    },
+    {
+        id: 11,
+        name: "AR Square Standard",
+        title: "AR Square Standard - Gương Vuông Tiêu Chuẩn",
+        category: "guong-vuong",
+        categoryName: "Gương vuông",
+        price: "Liên hệ",
+        priceDisplay: "Liên hệ",
+        image: "DemoImage/image/SQ02.jpg",
+        glb: null,
+        thumbnails: [
+            "DemoImage/image/SQ02.jpg",
+            "DemoImage/image/SQ02.jpg",
+            "DemoImage/image/SQ02.jpg"
+        ],
+        colors: [
+            { name: "Gỗ cao cấp", value: "premium-wood", hex: "#654321", active: true },
+            { name: "Vàng đồng", value: "gold", hex: "#D4AF37" },
+            { name: "Bạc", value: "silver", hex: "#C0C0C0" }
+        ],
+        sizes: [
+            { value: "60x80", label: "60×80 cm", priceAdd: 0, active: true },
+            { value: "70x100", label: "70×100 cm", priceAdd: 0 }
+        ],
+        description: "Gương vuông tiêu chuẩn với chất liệu và hoàn thiện nâng cấp, mang đến vẻ đẹp sang trọng và chuyên nghiệp. Khung gỗ cao cấp được xử lý kỹ lưỡng, đảm bảo độ bền và tính thẩm mỹ cao. Thiết kế vuông vức tạo cảm giác chắc chắn và ổn định, phù hợp cho những không gian cần sự trang trọng và đẳng cấp."
+    },
+    {
+        id: 12,
+        name: "AR Rectangle Standard",
+        title: "AR Rectangle Standard - Gương Chữ Nhật Tiêu Chuẩn",
+        category: "guong-vuong",
+        categoryName: "Gương vuông",
+        price: "Liên hệ",
+        priceDisplay: "Liên hệ",
+        image: "DemoImage/image/SQ03.jpg",
+        glb: null,
+        thumbnails: [
+            "DemoImage/image/SQ03.jpg",
+            "DemoImage/image/SQ03.jpg",
+            "DemoImage/image/SQ03.jpg"
+        ],
+        colors: [
+            { name: "Gỗ cao cấp", value: "premium-wood", hex: "#654321", active: true },
+            { name: "Vàng đồng", value: "gold", hex: "#D4AF37" },
+            { name: "Bạc", value: "silver", hex: "#C0C0C0" }
+        ],
+        sizes: [
+            { value: "60x80", label: "60×80 cm", priceAdd: 0, active: true },
+            { value: "70x100", label: "70×100 cm", priceAdd: 0 }
+        ],
+        description: "Gương chữ nhật tiêu chuẩn với tỷ lệ vàng hoàn hảo, tạo cảm giác hài hòa và cân đối cho không gian. Khung gỗ cao cấp được chế tác tinh xảo, mỗi góc cạnh đều được xử lý tỉ mỉ. Hình dáng chữ nhật dọc tạo hiệu ứng kéo dài không gian, lý tưởng cho hành lang, cầu thang hoặc những khu vực cần tạo chiều sâu thị giác."
+    },
+    {
+        id: 13,
+        name: "AR Standing Basic",
+        title: "AR Standing Basic - Gương Đứng Cơ Bản",
+        category: "guong-dung",
+        categoryName: "Gương đứng",
+        price: "Liên hệ",
+        priceDisplay: "Liên hệ",
+        image: "DemoImage/image/ST01.jpg",
+        glb: null,
+        thumbnails: [
+            "DemoImage/image/ST01.jpg",
+            "DemoImage/image/ST01.jpg",
+            "DemoImage/image/ST01.jpg"
+        ],
+        colors: [
+            { name: "Gỗ tự nhiên", value: "wood", hex: "#8B4513", active: true },
+            { name: "Trắng", value: "white", hex: "#FFFFFF" },
+            { name: "Đen", value: "black", hex: "#333333" }
+        ],
+        sizes: [
+            { value: "50x160", label: "50×160 cm", priceAdd: 0, active: true },
+            { value: "60x170", label: "60×170 cm", priceAdd: 0 }
+        ],
+        description: "Gương đứng cơ bản với thiết kế tối giản và hiện đại, phù hợp cho phòng ngủ và phòng thay đồ. Khung gỗ tự nhiên cao cấp mang đến vẻ đẹp ấm áp, trong khi kích thước lớn cho phép bạn nhìn toàn bộ trang phục. Sản phẩm có thể đặt sàn hoặc treo tường, linh hoạt trong việc bố trí không gian. Thiết kế chắc chắn và ổn định, đảm bảo an toàn khi sử dụng."
+    },
+    {
+        id: 14,
+        name: "AR Standing Standard",
+        title: "AR Standing Standard - Gương Đứng Tiêu Chuẩn",
+        category: "guong-dung",
+        categoryName: "Gương đứng",
+        price: "Liên hệ",
+        priceDisplay: "Liên hệ",
+        image: "DemoImage/image/ST02.jpg",
+        glb: null,
+        thumbnails: [
+            "DemoImage/image/ST02.jpg",
+            "DemoImage/image/ST02.jpg",
+            "DemoImage/image/ST02.jpg"
+        ],
+        colors: [
+            { name: "Gỗ cao cấp", value: "premium-wood", hex: "#654321", active: true },
+            { name: "Vàng đồng", value: "gold", hex: "#D4AF37" },
+            { name: "Bạc", value: "silver", hex: "#C0C0C0" }
+        ],
+        sizes: [
+            { value: "50x160", label: "50×160 cm", priceAdd: 0, active: true },
+            { value: "60x170", label: "60×170 cm", priceAdd: 0 }
+        ],
+        description: "Gương đứng tiêu chuẩn với chất liệu và hoàn thiện nâng cấp, mang đến vẻ đẹp sang trọng và đẳng cấp. Khung gỗ cao cấp được chế tác thủ công tỉ mỉ, mỗi chi tiết đều thể hiện sự tinh xảo. Kích thước lớn cho phép bạn nhìn toàn bộ trang phục một cách rõ ràng và chính xác. Sản phẩm là vật dụng không thể thiếu cho tủ quần áo hiện đại, giúp bạn tự tin với mọi trang phục."
     }
 ];
 
@@ -178,14 +389,7 @@ const categoriesData = [
     { id: "guong-trang-tri", name: "Gương trang trí", icon: "✨" }
 ];
 
-// Price ranges for filter
-const priceRanges = [
-    { id: "all", name: "Tất cả giá", min: 0, max: Infinity },
-    { id: "under-1m", name: "Dưới 1 triệu", min: 0, max: 1000000 },
-    { id: "1m-2m", name: "1 - 2 triệu", min: 1000000, max: 2000000 },
-    { id: "2m-3m", name: "2 - 3 triệu", min: 2000000, max: 3000000 },
-    { id: "above-3m", name: "Trên 3 triệu", min: 3000000, max: Infinity }
-];
+// Price ranges removed - all products use "Liên hệ"
 
 // All available colors
 const allColors = [
@@ -194,7 +398,10 @@ const allColors = [
     { value: "black", name: "Đen", hex: "#333333" },
     { value: "white", name: "Trắng", hex: "#FFFFFF" },
     { value: "wood", name: "Gỗ", hex: "#8B4513" },
-    { value: "bronze", name: "Đồng", hex: "#CD7F32" }
+    { value: "bronze", name: "Đồng", hex: "#CD7F32" },
+    { value: "copper", name: "Đồng đỏ", hex: "#B87333" },
+    { value: "oak", name: "Gỗ sồi", hex: "#806517" },
+    { value: "walnut", name: "Gỗ óc chó", hex: "#5C4033" }
 ];
 
 // All available sizes (simplified for filter)
@@ -219,9 +426,9 @@ function getCategories() {
     return categoriesData;
 }
 
-// Function to get price ranges
+// Function to get price ranges - removed (no price filtering)
 function getPriceRanges() {
-    return priceRanges;
+    return [];
 }
 
 // Function to get all colors
@@ -253,20 +460,18 @@ function filterProducts(filters) {
         filtered = filtered.filter(product => product.category === filters.category);
     }
     
-    // Filter by price range
-    if (filters.priceRange && filters.priceRange !== 'all') {
-        const range = priceRanges.find(r => r.id === filters.priceRange);
-        if (range) {
-            filtered = filtered.filter(product => 
-                product.price >= range.min && product.price < range.max
-            );
-        }
-    }
+    // Price range filter removed - all products use "Liên hệ"
     
     // Filter by color
     if (filters.color && filters.color !== 'all') {
         filtered = filtered.filter(product => 
-            product.colors.some(c => c.value === filters.color)
+            product.colors.some(c => {
+                // Exact match
+                if (c.value === filters.color) return true;
+                // Partial match for variants (e.g., "wood" matches "premium-wood", "art-wood")
+                if (c.value.includes(filters.color) || filters.color.includes(c.value)) return true;
+                return false;
+            })
         );
     }
     
@@ -298,7 +503,7 @@ function filterProducts(filters) {
     return filtered;
 }
 
-// Function to format price
+// Function to format price - removed (all products use "Liên hệ")
 function formatPrice(price) {
-    return price.toLocaleString('vi-VN') + ' đ';
+    return "Liên hệ";
 }
