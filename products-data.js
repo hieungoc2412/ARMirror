@@ -30,10 +30,10 @@ const productsData = [
     },
     {
         id: 2,
-        name: "Gương Vuông Minimalist",
-        title: "Gương Vuông Phong Cách Tối Giản",
+        name: "Gương Trang Trí Minimalist",
+        title: "Gương Trang Trí Phong Cách Tối Giản",
         category: "guong-vuong",
-        categoryName: "Gương vuông",
+        categoryName: "Gương trang trí",
         price: "Liên hệ",
         priceDisplay: "Liên hệ",
         image: "DemoImage/image/Model2.jpg",
@@ -45,7 +45,7 @@ const productsData = [
         ],
         colors: [
             { name: "Trắng", value: "white", hex: "#FFFFFF", active: true },
-            { name: "Đen", value: "black", hex: "#333333" },
+            { name: "Viền vàng", value: "gold", hex: "#D4AF37" },
             { name: "Gỗ tự nhiên", value: "wood", hex: "#8B4513" }
         ],
         sizes: [
